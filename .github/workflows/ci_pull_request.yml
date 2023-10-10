@@ -1,8 +1,7 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: CI pull Request
+run-name: ${{ github.actor }} is testing out 🚀
 on:
   pull_request:
-    # Sequence of patterns matched against refs/heads
     branches:
       - main
 jobs:
@@ -20,3 +19,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Build-Application:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ng build
