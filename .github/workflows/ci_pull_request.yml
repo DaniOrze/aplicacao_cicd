@@ -22,10 +22,11 @@ jobs:
   Build-Application:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt-get install software-properties-common
-      - run: curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-      - run: sudo apt-get install nodejs
-      - run: node --version
+      - run: sudo apt update
+      - run: sudo apt-get install nodejs -y
+      - run: sudo apt install npm
+      - run: nodejs -v
+      - run: npm -v
       - run: npm install -g @angular/cli
       - run: ng --version
       - run: ng build
