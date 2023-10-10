@@ -28,5 +28,4 @@ jobs:
       - run: nodejs -v
       - run: npm -v
       - run: npm install -g @angular/cli
-      - run: ng --version
       - run: ng build
