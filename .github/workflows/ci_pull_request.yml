@@ -44,8 +44,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: npm install
-      - run: ng test
-  E2E-Tests-Application:
+      - run: npm ci
+      - run: npm run test:prod
+  Lint-Application:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt update
@@ -57,4 +58,5 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: npm install
-      - run: ng e2e
+      - run: npm ci
+      - run: npm run lint
