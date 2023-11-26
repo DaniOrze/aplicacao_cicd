@@ -43,7 +43,6 @@
   font-weight: 500;
 }
 
-
 .forms_media {
   display: flex;
   justify-content: center;
@@ -59,4 +58,8 @@
 
 :host ::ng-deep .mat-mdc-raised-button.mat-unthemed {
   background-color: rgba(0, 0, 0, 0.4);
+}
+=======
+  font-size: 18px;
+  font-weight: 500;
 }
