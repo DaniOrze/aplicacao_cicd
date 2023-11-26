@@ -1,5 +1,24 @@
 <div class="main_container">
   <div class="box">
-    <h1> Isso é uma aplicação CI/CD</h1>
+    <h1> Isso é uma aplicação utilizando CI/CD</h1>
   </div>
+  <form class="box" [formGroup]="mediaForm" (ngSubmit)="submitForm()">
+    <h2>Calcule a sua média na matéria:</h2>
+    <div class="forms_media">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nota 1</mat-label>
+        <input matInput placeholder="Ex. 10" formControlName="n1">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nota 2</mat-label>
+        <input matInput placeholder="Ex. 10" formControlName="n2">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nota 3</mat-label>
+        <input matInput placeholder="Ex. 10" formControlName="n3">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button type="submit">Calcular Média</button>
+    <div class="resposta">A sua média é: {{ resultado }}</div>
+  </form>
 </div>
