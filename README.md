@@ -21,7 +21,7 @@ This project using Angular 16 aims to demonstrate an application utilizing CI/CD
   </p>
 </p>
 
-## Funcionalidades
+## Features
 
 - [x] User-friendly interface using Angular's Material UI.
 - [x] Implementation of the average calculation, considering three numbers as input.
